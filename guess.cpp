@@ -4,6 +4,8 @@
 
 using namespace std;
 
+// Main Task: A number game of guessing the random number between 1 and 100
+// Improvement: Keep track of guesses and print out the tries at the end
 int main() {
     // initialize random seed
     srand(static_cast<unsigned int>(time(0))); 

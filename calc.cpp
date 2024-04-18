@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+// Main Task: Create a calculator to handle +, -, *, and /. 
+// Improvement: add result variable that remembers the last calculation
 int main() {
     double num1, num2;
     char operation;

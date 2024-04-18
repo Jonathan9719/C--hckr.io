@@ -5,6 +5,23 @@
 
 using namespace std;
 
+// Main Task: create a program to record tasks by, read them from a file, and write
+//          them to a file.
+// Improvement: add functionality to complete a task.
+
+// Add a task to the list
+void addTask(vector<string> &tasks)
+{
+    string task; 
+    cout << "Enter a task: ";
+    cin.ignore(); // clears the input buffer
+    getline(cin, task);
+    tasks.push_back(task);
+    cout << endl;
+}
+
+
+// Shows the list of tasks
 void showTasks(const vector<string> &tasks)
 {
     cout << "To-Do List:\n";
@@ -16,6 +33,7 @@ void showTasks(const vector<string> &tasks)
     cout << endl;
 }
 
+// Remove a completed task
 void completedTask(vector<string> &tasks)
 {
     int index;
@@ -39,6 +57,7 @@ void completedTask(vector<string> &tasks)
 
 }
 
+// Handle user interaction 
 int main()
 {
     vector<string>  tasks; // Vector to store the tasks
@@ -67,11 +86,7 @@ int main()
         {
         case 'A':
         case 'a':
-            cout << "Enter a task: ";
-            cin.ignore(); // clears the input buffer
-            getline(cin, task);
-            tasks.push_back(task);
-            cout << endl;
+            addTask(tasks);
             break;
         case 'V':
         case 'v':

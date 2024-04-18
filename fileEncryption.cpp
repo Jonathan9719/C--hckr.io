@@ -4,6 +4,8 @@
 
 using namespace std;
 
+// ideas from writer Why not try a substitution cipher? 
+// Or perhaps a randomly generated key? Perhaps you can look at some form of login with a username and a password?
 void encryptFile (const string &inputFilePath, const string outputFilePath, int key)
 {
     ifstream inputFile(inputFilePath, ios::binary);
